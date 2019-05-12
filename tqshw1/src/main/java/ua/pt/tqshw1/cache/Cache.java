@@ -10,6 +10,8 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Iterator;
 import java.util.Map.Entry;
+import java.util.logging.Level;
+import java.util.logging.Logger;
  
 /**
  * @author abilio
@@ -44,6 +46,8 @@ public class Cache<K, T> {
                         try {
                             Thread.sleep(timeInterval * 1000);
                         } catch (InterruptedException ex) {
+                            // Restore interrupted state...
+                            Thread.currentThread().interrupt();
                         }
                         
                     }
