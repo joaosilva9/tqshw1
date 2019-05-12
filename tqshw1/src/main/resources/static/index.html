@@ -1,0 +1,232 @@
+<html>
+<head>
+<meta charset="UTF-8">
+<title>TQS Homework</title>
+<style>
+.grid-container {
+  display: grid;
+  grid-template-columns: auto auto auto auto auto;
+  grid-gap: 10px;
+  padding: 10px;
+}
+
+.grid-container > div {
+  text-align: center;
+  padding: 100px 0;
+  font-size: 20px;
+}
+
+
+</style>
+</head>
+<body>
+    <h1>Previsão de Tempo</h1>
+    <form>
+       <fieldset>
+          <legend>Selecione uma cidade:</legend>
+            <p>
+                <select id="mySelect" onchange="getInfo()">
+                  <option value="" selected="selected"></option>
+                  <option value="Aveiro">Aveiro</option>
+                  <option value="Beja">Beja</option>
+                  <option value="Braga">Braga</option>
+                  <option value="Bragança">Bragança</option>
+                  <option value="Castelo Branco">Castelo Branco</option>
+                  <option value="Coimbra">Coimbra</option>
+                  <option value="Évora">Évora</option>
+                  <option value="Faro">Faro</option>
+                  <option value="Guarda">Guarda</option>
+                  <option value="Leiria">Leiria</option>
+                  <option value="Lisboa">Lisboa</option>
+                  <option value="Portalegre">Portalegre</option>
+                  <option value="Porto">Porto</option>
+                  <option value="Santarém">Santarém</option>
+                  <option value="Setúbal">Setúbal</option>
+                  <option value="Viana do Castelo">Viana do Castelo</option>
+                  <option value="Vila Real">Vila Real</option>
+                  <option value="Viseu">Viseu</option>
+                  <option value="Funchal">Funchal</option>
+                  <option value="Porto Santo">Porto Santo</option>
+                  <option value="Ponta Delgada">Ponta Delgada</option>
+                  <option value="Angra do Heroísmo">Angra do Heroísmo</option>
+                  <option value="Horta">Horta</option>
+                  <option value="Santa Cruz das Flores">Santa Cruz das Flores</option>
+                </select>
+            </p>
+       </fieldset>
+    </form>
+    
+    <div id="myDIV" class="grid-container" style="display: none;">
+        <div class="weatherTable">
+            <fieldset>
+                <legend id="date1">Data</legend>
+                <p id="description1">Descrição</p>
+                <p id="maxTemp1">Temperatura Máxima</p>
+                <p id="minTemp1">Temperatura Mínima</p>
+                <p id="precipitation1">Tempo</p>
+            </fieldset>
+        </div>
+        <div class="weatherTable">
+            <fieldset>
+                <legend id="date2">Data</legend>
+                <p id="description2">Descrição</p>
+                <p id="maxTemp2">Temperatura Máxima</p>
+                <p id="minTemp2">Temperatura Mínima</p>
+                <p id="precipitation2">Tempo</p>
+            </fieldset>
+        </div>
+        <div class="weatherTable">
+            <fieldset>
+                <legend id="date3">Data</legend>
+                <p id="description3">Descrição</p>
+                <p id="maxTemp3">Temperatura Máxima</p>
+                <p id="minTemp3">Temperatura Mínima</p>
+                <p id="precipitation3">Tempo</p>
+            </fieldset>
+        </div>  
+        <div class="weatherTable">
+            <fieldset>
+                <legend id="date4">Data</legend>
+                <p id="description4">Descrição</p>
+                <p id="maxTemp4">Temperatura Máxima</p>
+                <p id="minTemp4">Temperatura Mínima</p>
+                <p id="precipitation4">Tempo</p>
+            </fieldset>
+        </div>
+        <div class="weatherTable">
+            <fieldset>
+                <legend id="date5">Data</legend>
+                <p id="description5">Descrição</p>
+                <p id="maxTemp5">Temperatura Máxima</p>
+                <p id="minTemp5">Temperatura Mínima</p>
+                <p id="precipitation5">Tempo</p>
+            </fieldset>
+        </div>
+    </div>
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script type="text/javascript">
+        function getInfo() {
+                var city = document.getElementById("mySelect").value;
+                if (city.toString().length == 0){
+                    var x = document.getElementById("myDIV");
+                    x.style.display = "none";
+                }
+                else{
+                    var weatherData;
+                    $.ajax({
+                        async: false,
+                        type: 'GET',
+                        crossDomain: false,
+                        url: 'http://localhost:8080/weather_city/' + city.toString(),
+                        success: function (data) {
+                            weatherData = data;
+                        }
+                    });
+
+                    showInfo(weatherData);
+                }
+                
+            }
+            
+            
+        function showInfo(info){
+            var x = document.getElementById("myDIV");
+            x.style.display = "";
+            //console.log(requestData[0]["tMax"]);
+            document.getElementById("date1").innerHTML = info[0]["forecastDate"];
+            var description1;
+            $.ajax({
+                async: false,
+                type: 'GET',
+                crossDomain: false,
+                url: 'http://localhost:8080/weather_type/' + info[0]["idWeatherType"].toString(),
+                success: function (data) {
+                    description1 = data;
+                }
+            });
+            document.getElementById("description1").innerHTML = description1.toString();
+            document.getElementById("maxTemp1").innerHTML = "Temperatura Máxima: " + info[0]["tMax"];
+            document.getElementById("minTemp1").innerHTML = "Temperatura Mínima: " + info[0]["tMin"];
+            document.getElementById("precipitation1").innerHTML = "Precipitação: " + info[0]["precipitaProb"] + "%";
+            
+         
+            document.getElementById("date2").innerHTML = info[1]["forecastDate"];
+            var description2;
+            $.ajax({
+                async: false,
+                type: 'GET',
+                crossDomain: false,
+                url: 'http://localhost:8080/weather_type/' + info[1]["idWeatherType"].toString(),
+                success: function (data) {
+                    description2 = data;
+                }
+            });
+            document.getElementById("description2").innerHTML = description2.toString();
+            document.getElementById("maxTemp2").innerHTML = "Temperatura Máxima: " + info[1]["tMax"];
+            document.getElementById("minTemp2").innerHTML = "Temperatura Mínima: " + info[1]["tMin"];
+            document.getElementById("precipitation2").innerHTML = "Precipitação: " + info[1]["precipitaProb"] + "%";
+
+
+
+            document.getElementById("date3").innerHTML = info[2]["forecastDate"];
+            var description3;
+            $.ajax({
+                async: false,
+                type: 'GET',
+                crossDomain: false,
+                url: 'http://localhost:8080/weather_type/' + info[2]["idWeatherType"].toString(),
+                success: function (data) {
+                    description3 = data;
+                }
+            });
+            document.getElementById("description3").innerHTML = description3.toString();
+            document.getElementById("maxTemp3").innerHTML = "Temperatura Máxima: " + info[2]["tMax"];
+            document.getElementById("minTemp3").innerHTML = "Temperatura Mínima: " + info[2]["tMin"];
+            document.getElementById("precipitation3").innerHTML = "Precipitação: " + info[2]["precipitaProb"] + "%";
+            
+            
+           
+            document.getElementById("date4").innerHTML = info[3]["forecastDate"];
+            var description4;
+            $.ajax({
+                async: false,
+                type: 'GET',
+                crossDomain: false,
+                url: 'http://localhost:8080/weather_type/' + info[3]["idWeatherType"].toString(),
+                success: function (data) {
+                    description4 = data;
+                }
+            });
+            document.getElementById("description4").innerHTML = description4.toString();
+            document.getElementById("description4").innerHTML = info[3]["idWeatherType"];
+            document.getElementById("maxTemp4").innerHTML = "Temperatura Máxima: " + info[3]["tMax"];
+            document.getElementById("minTemp4").innerHTML = "Temperatura Mínima: " + info[3]["tMin"];
+            document.getElementById("precipitation4").innerHTML = "Precipitação: " + info[3]["precipitaProb"] + "%";
+            
+            
+            
+            
+            document.getElementById("date5").innerHTML = info[4]["forecastDate"];
+            var description5;
+            $.ajax({
+                async: false,
+                type: 'GET',
+                crossDomain: false,
+                url: 'http://localhost:8080/weather_type/' + info[4]["idWeatherType"].toString(),
+                success: function (data) {
+                    description5 = data;
+                }
+            });
+            document.getElementById("description5").innerHTML = description5.toString();
+            document.getElementById("maxTemp5").innerHTML = "Temperatura Máxima: " + info[4]["tMax"];
+            document.getElementById("minTemp5").innerHTML = "Temperatura Mínima: " + info[4]["tMin"];
+            document.getElementById("precipitation5").innerHTML = "Precipitação: " + info[4]["precipitaProb"] + "%";
+       
+        }
+        
+    </script>
+</body>
+
+
+</html>
