@@ -1,0 +1,98 @@
+
+Pua.pt.tqshw1.services.IPMAService#getWeather(Ljava/lang/String;)Ljava/util/List;b
+X/home/abilio/GitFiles/tqshw1/tqshw1/src/main/java/ua/pt/tqshw1/services/IPMAService.java ("1*’
+1b
+X/home/abilio/GitFiles/tqshw1/tqshw1/src/main/java/ua/pt/tqshw1/services/IPMAService.java   (∞≠
+b
+X/home/abilio/GitFiles/tqshw1/tqshw1/src/main/java/ua/pt/tqshw1/services/IPMAService.java   (#
+%0java.lang.String"Oua.pt.tqshw1.services.IPMAService#getCode(Ljava/lang/String;)Ljava/lang/String;*%#
+!ua.pt.tqshw1.services.IPMAService*
+
+cityjava.lang.String2getCode(Ljava/lang/String;)°
+û
+b
+X/home/abilio/GitFiles/tqshw1/tqshw1/src/main/java/ua/pt/tqshw1/services/IPMAService.java   ($
+codejava.lang.String"__id*
+
+%0java.lang.String¡
+æ
+b
+X/home/abilio/GitFiles/tqshw1/tqshw1/src/main/java/ua/pt/tqshw1/services/IPMAService.java! !( 
+%1javax.ws.rs.client.Client"__id*1*/#
+!ua.pt.tqshw1.services.IPMAService"
+clientç
+ä
+b
+X/home/abilio/GitFiles/tqshw1/tqshw1/src/main/java/ua/pt/tqshw1/services/IPMAService.java"( "(6
+%2java.lang.String"__id*
+""ø
+º
+b
+X/home/abilio/GitFiles/tqshw1/tqshw1/src/main/java/ua/pt/tqshw1/services/IPMAService.java"( "(;
+%3java.lang.String"__concat*
+
+%2java.lang.String*
+
+codejava.lang.Stringç
+ä
+b
+X/home/abilio/GitFiles/tqshw1/tqshw1/src/main/java/ua/pt/tqshw1/services/IPMAService.java"< "(D
+%4java.lang.String"__id*
+""Ω
+∫
+b
+X/home/abilio/GitFiles/tqshw1/tqshw1/src/main/java/ua/pt/tqshw1/services/IPMAService.java"( "(D
+%5java.lang.String"__concat*
+
+%3java.lang.String*
+
+%4java.lang.String∏µ
+b
+X/home/abilio/GitFiles/tqshw1/tqshw1/src/main/java/ua/pt/tqshw1/services/IPMAService.java! "(E"
+%6javax.ws.rs.client.WebTarget"Rjavax.ws.rs.client.Client#target(Ljava/lang/String;)Ljavax/ws/rs/client/WebTarget;*!
+
+%1javax.ws.rs.client.Client*
+
+%5java.lang.String2target(Ljava/lang/String;)ç
+ä
+b
+X/home/abilio/GitFiles/tqshw1/tqshw1/src/main/java/ua/pt/tqshw1/services/IPMAService.java#) #(C
+%7java.lang.String"__id*
+""‘—
+b
+X/home/abilio/GitFiles/tqshw1/tqshw1/src/main/java/ua/pt/tqshw1/services/IPMAService.java! #(D+
+%8%javax.ws.rs.client.Invocation$Builder"`javax.ws.rs.client.WebTarget#request([Ljava/lang/String;)Ljavax/ws/rs/client/Invocation$Builder;*$
+"
+%6javax.ws.rs.client.WebTarget*
+
+%7java.lang.String2request([Ljava/lang/String;)°û
+b
+X/home/abilio/GitFiles/tqshw1/tqshw1/src/main/java/ua/pt/tqshw1/services/IPMAService.java! $(6 
+%9org.json.simple.JSONObject"Gjavax.ws.rs.client.SyncInvoker#get(Ljava/lang/Class;)Ljava/lang/Object;*-
++
+%8%javax.ws.rs.client.Invocation$Builder*
+""2get(Ljava/lang/Class;)µ
+≤
+b
+X/home/abilio/GitFiles/tqshw1/tqshw1/src/main/java/ua/pt/tqshw1/services/IPMAService.java! $(7"
+dataorg.json.simple.JSONObject"__id*"
+ 
+%9org.json.simple.JSONObjectÜÉ
+b
+X/home/abilio/GitFiles/tqshw1/tqshw1/src/main/java/ua/pt/tqshw1/services/IPMAService.java& &(.
+%10java.lang.Object";java.util.HashMap#get(Ljava/lang/Object;)Ljava/lang/Object;*$
+"
+dataorg.json.simple.JSONObject*
+data2get(Ljava/lang/Object;)£
+†
+b
+X/home/abilio/GitFiles/tqshw1/tqshw1/src/main/java/ua/pt/tqshw1/services/IPMAService.java& &(/
+dayPredjava.util.List"__id*
+
+%10java.lang.Object"Å
+b
+X/home/abilio/GitFiles/tqshw1/tqshw1/src/main/java/ua/pt/tqshw1/services/IPMAService.java' '(
+
+dayPredjava.util.List:
+cityjava.lang.StringB%#
+!ua.pt.tqshw1.services.IPMAService
