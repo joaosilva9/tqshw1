@@ -28,7 +28,8 @@ public class IPMAService {
     private static final String BaseURLTypeWeather = "http://api.ipma.pt/open-data/weather-type-classe";
     public static final String FinalURL = ".json";
     
-    public List getWeather(String code){
+    public List getWeather(String city){
+        String code = getCode(city);
         JSONObject data = client
                                 .target(BaseURLWeather+code+FinalURL)
                                 .request(MediaType.APPLICATION_JSON)
