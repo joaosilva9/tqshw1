@@ -1,8 +1,4 @@
 -------------------------------------------------------------------------------
 Test set: ua.pt.tqshw1.cache.CacheTest
 -------------------------------------------------------------------------------
-Tests run: 5, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 0.03 s <<< FAILURE! - in ua.pt.tqshw1.cache.CacheTest
-testCleanup  Time elapsed: 0.006 s  <<< ERROR!
-java.lang.ClassCastException: java.util.HashMap$Node cannot be cast to java.lang.String
-	at ua.pt.tqshw1.cache.CacheTest.testCleanup(CacheTest.java:89)
-
+Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.006 s - in ua.pt.tqshw1.cache.CacheTest
