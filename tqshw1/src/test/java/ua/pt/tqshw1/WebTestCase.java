@@ -10,30 +10,37 @@ package ua.pt.tqshw1;
  * @author abilio
  */
 
-import java.util.regex.Pattern;
+import io.github.bonigarcia.seljup.SeleniumExtension;
 import java.util.concurrent.TimeUnit;
-import org.junit.*;
-import static org.junit.Assert.*;
-import static org.hamcrest.CoreMatchers.*;
+import org.junit.jupiter.api.AfterEach;
+import static org.junit.jupiter.api.Assertions.fail;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.extension.ExtendWith;
 import org.openqa.selenium.*;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import io.github.bonigarcia.wdm.WebDriverManager;
+import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.Select;
 
+
 public class WebTestCase {
+    
   private WebDriver driver;
   private String baseUrl;
   private boolean acceptNextAlert = true;
   private StringBuffer verificationErrors = new StringBuffer();
 
-  @Before
+  @BeforeEach
   public void setUp() throws Exception {
-    driver = new FirefoxDriver();
+    
+    driver = new ChromeDriver();
     baseUrl = "https://www.katalon.com/";
     driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
   }
 
   @Test
-  public void testUntitledTestCase() throws Exception {
+  public void testWebTestCase() throws Exception {
     driver.get("http://localhost:8080/");
     new Select(driver.findElement(By.id("mySelect"))).selectByVisibleText("Castelo Branco");
     driver.findElement(By.id("mySelect")).click();
@@ -92,7 +99,7 @@ public class WebTestCase {
     driver.findElement(By.id("mySelect")).click();
   }
 
-  @After
+  @AfterEach
   public void tearDown() throws Exception {
     driver.quit();
     String verificationErrorString = verificationErrors.toString();

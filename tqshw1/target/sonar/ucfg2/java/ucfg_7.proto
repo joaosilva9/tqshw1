@@ -5,30 +5,48 @@ O/home/abilio/GitFiles/tqshw1/tqshw1/src/main/java/ua/pt/tqshw1/cache/Cache.java
 O/home/abilio/GitFiles/tqshw1/tqshw1/src/main/java/ua/pt/tqshw1/cache/Cache.javaL L("c
 Y
 O/home/abilio/GitFiles/tqshw1/tqshw1/src/main/java/ua/pt/tqshw1/cache/Cache.javaL L(
-""*ñ
+""*∂
+
 3Y
-O/home/abilio/GitFiles/tqshw1/tqshw1/src/main/java/ua/pt/tqshw1/cache/Cache.javaI* I(2©
+O/home/abilio/GitFiles/tqshw1/tqshw1/src/main/java/ua/pt/tqshw1/cache/Cache.javaI, I(4©
 ¶
 Y
-O/home/abilio/GitFiles/tqshw1/tqshw1/src/main/java/ua/pt/tqshw1/cache/Cache.javaI* I(2
+O/home/abilio/GitFiles/tqshw1/tqshw1/src/main/java/ua/pt/tqshw1/cache/Cache.javaI, I(4
 %2java.util.HashMap"__id***(
 ua.pt.tqshw1.cache.Cache"
 
 cacheMap‰·
 Y
-O/home/abilio/GitFiles/tqshw1/tqshw1/src/main/java/ua/pt/tqshw1/cache/Cache.javaI* I(;
+O/home/abilio/GitFiles/tqshw1/tqshw1/src/main/java/ua/pt/tqshw1/cache/Cache.javaI, I(=
 %3T";java.util.HashMap#get(Ljava/lang/Object;)Ljava/lang/Object;*
 
 %2java.util.HashMap*
 
 
-keyK2get(Ljava/lang/Object;)ö
-ó
+keyK2get(Ljava/lang/Object;)ºπ
 Y
-O/home/abilio/GitFiles/tqshw1/tqshw1/src/main/java/ua/pt/tqshw1/cache/Cache.javaI I(<)
-c$ua.pt.tqshw1.cache.Cache$CacheObject"__id*	
+O/home/abilio/GitFiles/tqshw1/tqshw1/src/main/java/ua/pt/tqshw1/cache/Cache.javaI, I(H
+%4java.lang.String"-java.lang.Object#toString()Ljava/lang/String;*	
 
-%3T*
+%3T2
+toString()∞≠
+Y
+O/home/abilio/GitFiles/tqshw1/tqshw1/src/main/java/ua/pt/tqshw1/cache/Cache.javaI  I(+*
+%5$ua.pt.tqshw1.cache.Cache$CacheObject"$ua.pt.tqshw1.cache.Cache$CacheObjectà
+Ö
+Y
+O/home/abilio/GitFiles/tqshw1/tqshw1/src/main/java/ua/pt/tqshw1/cache/Cache.javaI I(I
+%6"Zua.pt.tqshw1.cache.Cache$CacheObject#<init>(Lua/pt/tqshw1/cache/Cache;Ljava/lang/String;)V*,
+*
+%5$ua.pt.tqshw1.cache.Cache$CacheObject*
+
+%4java.lang.StringΩ
+∫
+Y
+O/home/abilio/GitFiles/tqshw1/tqshw1/src/main/java/ua/pt/tqshw1/cache/Cache.javaI I(J)
+c$ua.pt.tqshw1.cache.Cache$CacheObject"__id*,
+*
+%5$ua.pt.tqshw1.cache.Cache$CacheObject*
 2
 1*è
 4Y
@@ -65,18 +83,18 @@ O/home/abilio/GitFiles/tqshw1/tqshw1/src/main/java/ua/pt/tqshw1/cache/Cache.java
 Y
 O/home/abilio/GitFiles/tqshw1/tqshw1/src/main/java/ua/pt/tqshw1/cache/Cache.javaN! N(;
 
-%4long"%java.lang.System#currentTimeMillis()J*"
+%7long"%java.lang.System#currentTimeMillis()J*"
 java.lang.System¥
 ±
 Y
 O/home/abilio/GitFiles/tqshw1/tqshw1/src/main/java/ua/pt/tqshw1/cache/Cache.javaO O("
-%5java.lang.String"__id*6*4
+%8java.lang.String"__id*6*4
 )
 c$ua.pt.tqshw1.cache.Cache$CacheObject"
 value"u
 Y
 O/home/abilio/GitFiles/tqshw1/tqshw1/src/main/java/ua/pt/tqshw1/cache/Cache.javaO O(#
 
-%5java.lang.String:
+%8java.lang.String:
 keyKB
 ua.pt.tqshw1.cache.Cache

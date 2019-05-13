@@ -3,5 +3,5 @@ projectKey=joaosilva9_tqshw1
 serverUrl=https://sonarcloud.io
 serverVersion=7.8.0.24676
 dashboardUrl=https://sonarcloud.io/dashboard?id=joaosilva9_tqshw1
-ceTaskId=AWqty-ZlAki0z6x-6gRD
-ceTaskUrl=https://sonarcloud.io/api/ce/task?id=AWqty-ZlAki0z6x-6gRD
+ceTaskId=AWquhpXceCTcsUmsasrp
+ceTaskUrl=https://sonarcloud.io/api/ce/task?id=AWquhpXceCTcsUmsasrp
