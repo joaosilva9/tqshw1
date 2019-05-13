@@ -23,8 +23,8 @@ public class Cache<K, T> {
     private HashMap<K, T> cacheMap;
     
     protected class CacheObject {
-        public long lastAccessed = System.currentTimeMillis();
-        public String value;
+        private long lastAccessed = System.currentTimeMillis();
+        private String value;
         
         protected CacheObject(String value) {
             this.value = value;
