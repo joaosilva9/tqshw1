@@ -1,6 +1,6 @@
 # TQS - Homework 1
 
-### [Link para experimentar o site](https://github.com/joaosilva9/tqshw1)
+### [Relatório](https://drive.google.com/file/d/1NvllLjBL1Aqdq17sPrVhfKyecdBYD504/view?usp=sharing)
 
 ## Funcionalidade implementada
 
@@ -10,5 +10,3 @@ Esta aplicação de previsão de tempo é uma plataforma Web que através da API
 
 ## Arquitetura
 ![alt text](https://github.com/joaosilva9/tqshw1/blob/master/architecture_tqshw1.png)
-
-### [Relatório](https://drive.google.com/file/d/1NvllLjBL1Aqdq17sPrVhfKyecdBYD504/view?usp=sharing)
