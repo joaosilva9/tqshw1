@@ -5,12 +5,8 @@
  */
 package ua.pt.tqshw1.cache;
 
-import org.junit.After;
-import org.junit.AfterClass;
-import org.junit.Before;
-import org.junit.BeforeClass;
-import org.junit.Test;
-import static org.junit.Assert.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import org.junit.jupiter.api.Test;
 
 /**
  *
@@ -21,21 +17,6 @@ public class CacheTest {
     public CacheTest() {
     }
     
-    @BeforeClass
-    public static void setUpClass() {
-    }
-    
-    @AfterClass
-    public static void tearDownClass() {
-    }
-    
-    @Before
-    public void setUp() {
-    }
-    
-    @After
-    public void tearDown() {
-    }
 
     /**
      * Test of put method, of class Cache.
@@ -66,10 +47,8 @@ public class CacheTest {
         assertEquals(false, instance.containsKey(key));
         instance.put(key, value);
         assertEquals(true, instance.containsKey(key));
-        
-        Object expResult = value;
-        Object result = instance.get(key);
-        assertEquals(expResult, result);
+        System.out.println(instance.get(key));
+        assertEquals(value.toString(), instance.get(key).toString());
     }
 
     /**

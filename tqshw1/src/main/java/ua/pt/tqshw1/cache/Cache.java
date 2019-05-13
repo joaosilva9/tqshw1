@@ -70,7 +70,7 @@ public class Cache<K, T> {
     @SuppressWarnings("unchecked")
     public T get(K key) {
         synchronized (cacheMap) {
-            CacheObject c = (CacheObject) cacheMap.get(key);
+            CacheObject c = new CacheObject(cacheMap.get(key).toString());
             
             if (c == null)
                 return null;
