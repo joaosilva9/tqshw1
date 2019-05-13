@@ -152,6 +152,9 @@
                 <artifactId>maven-surefire-plugin</artifactId>
                 <configuration>
                     <!-- Force alphabetical order to have a reproducible build -->
+                    <includes>
+                       <include>**/*WebTestCase.java</include>
+                    </includes>
                     <runOrder>alphabetical</runOrder>
                     <useSystemClassLoader>false</useSystemClassLoader>
                 </configuration>
