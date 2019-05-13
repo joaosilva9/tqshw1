@@ -12,6 +12,17 @@
         <version>2.1.2.RELEASE</version>
     </parent>
     
+    <properties>
+        <start-class>ua.pt.tqshw1.ApplicationTPC</start-class>
+        <java.version>1.8</java.version>
+        <junit-jupiter.version>5.4.0</junit-jupiter.version>
+        <mockito.version>2.24.0</mockito.version>
+        
+        <!-- Sonar -->
+        <sonar.core.codeCoveragePlugin>jacoco</sonar.core.codeCoveragePlugin>
+        <sonar.dynamicAnalysis>reuseReports</sonar.dynamicAnalysis>
+    </properties>
+    
     <dependencies>
         <dependency>
             <groupId>org.springframework.boot</groupId>
@@ -91,16 +102,7 @@
         </dependency>
     </dependencies>
     
-    <properties>
-        <start-class>ua.pt.tqshw1</start-class>
-        <java.version>1.8</java.version>
-        <junit-jupiter.version>5.4.0</junit-jupiter.version>
-        <mockito.version>2.24.0</mockito.version>
-        
-        <!-- Sonar -->
-        <sonar.core.codeCoveragePlugin>jacoco</sonar.core.codeCoveragePlugin>
-        <sonar.dynamicAnalysis>reuseReports</sonar.dynamicAnalysis>
-    </properties>
+    
     
     <build>
         <plugins>
