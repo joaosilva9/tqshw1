@@ -70,12 +70,11 @@ public class Cache<K, T> {
         synchronized (cacheMap) {
             CacheObject c = new CacheObject(cacheMap.get(key).toString());
             
-            if (c == null)
-                return null;
-            else {
+            if (c.value!=null) {
                 c.lastAccessed = System.currentTimeMillis();
                 return (T) c.value;
             }
+            return null;
         }
     }
     
