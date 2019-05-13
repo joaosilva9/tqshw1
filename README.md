@@ -14,5 +14,5 @@ Esta aplicação de previsão de tempo é uma plataforma Web que através da API
 # Testes
 ## Testes Unitários
 ## Isolamento de dependências com mocks
-## Testes Funcionais
-## Teste funcional
+## Teste de integração relativamente à API de serviços disponibilizada.
+## Teste Funcional
