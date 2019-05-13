@@ -38,17 +38,15 @@ public class Cache<K, T> {
         
         if (timeToLive > 0 && timeInterval > 0) {
             
-            Thread t = new Thread(new Runnable() {
-                public void run() {
-                    while (true) {
-                        try {
-                            Thread.sleep(timeInterval * 1000);
-                        } catch (InterruptedException ex) {
-                            // Restore interrupted state...
-                            Thread.currentThread().interrupt();
-                        }
-                        
+            Thread t = new Thread(() -> {
+                while (true) {
+                    try {
+                        Thread.sleep(timeInterval * 1000);
+                    } catch (InterruptedException ex) {
+                        // Restore interrupted state...
+                        Thread.currentThread().interrupt();
                     }
+                    
                 }
             });
             

@@ -54,21 +54,7 @@ public class CacheWithService {
     }
     
     public String getTypeWeather(int idWeather){
-        List key = new ArrayList(Arrays.asList(idWeather));
-        String typeWeather;
-        if(this.cache.containsKey(key)){
-            try {
-                typeWeather = (String)this.cache.get(key);
-            } catch (Exception ex) {
-                Logger.getLogger(IPMAService.class.getName()).log(Level.SEVERE, null, ex);
-                typeWeather = ipma.getTypeWeather(idWeather);
-                this.cache.put(key, typeWeather);
-            }
-        }else{
-            typeWeather = ipma.getTypeWeather(idWeather);
-            this.cache.put(key, idWeather);
-        }
-        return typeWeather;
+        return ipma.getTypeWeather(idWeather);
     }
     
 }
