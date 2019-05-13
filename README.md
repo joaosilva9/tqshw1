@@ -8,8 +8,8 @@ Esta aplicação de previsão de tempo é uma plataforma Web que através da API
 
 ![alt text](https://github.com/joaosilva9/tqshw1/blob/master/webTQShw1.png)
 
-## Arquitetura (mudar)
-![alt text](https://github.com/joaosilva9/SolAppICM/blob/master/architecture.png)
+## Arquitetura
+![alt text](https://github.com/joaosilva9/tqshw1/blob/master/architecture_tqshw1.png)
 
 # Testes
 ## Testes Unitários
