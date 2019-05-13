@@ -11,8 +11,4 @@ Esta aplicação de previsão de tempo é uma plataforma Web que através da API
 ## Arquitetura
 ![alt text](https://github.com/joaosilva9/tqshw1/blob/master/architecture_tqshw1.png)
 
-# Testes
-## Testes Unitários
-## Isolamento de dependências com mocks
-## Teste de integração relativamente à API de serviços disponibilizada.
-## Teste Funcional
+### [Relatório](https://drive.google.com/file/d/1NvllLjBL1Aqdq17sPrVhfKyecdBYD504/view?usp=sharing)
